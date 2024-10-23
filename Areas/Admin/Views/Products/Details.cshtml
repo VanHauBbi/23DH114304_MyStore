@@ -5,13 +5,19 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Chi tiết sản phẩm</h2>
+<h2 class="bg-success">Chi tiết sản phẩm</h2>
 
-<div>
+@*<div>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-           Tên sản phẩm
+        </dt>
+        <dd>
+           <img src="@Html.DisplayFor(model => model.ProductImage)" />
+        </dd>
+
+        <dt>
+            Tên sản phẩm
         </dt>
 
         <dd>
@@ -24,14 +30,6 @@
 
         <dd>
             @Html.DisplayFor(model => model.ProductPrice)
-        </dd>
-
-        <dt>
-            Hình ảnh
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ProductImage)
         </dd>
 
         <dt>
@@ -51,8 +49,11 @@
         </dd>
 
     </dl>
+</div>*@
+@Html.Partial("PVDetailDele", Model)    
+<div style="margin-top:10px">
+    <p>
+        @Html.ActionLink("Sửa", "Edit", new { id = Model.ProductID }, new { @class = "btn btn-primary btn-sm" }) |
+        @Html.ActionLink("Quay lại danh sách", "Index", null, new { @class = "btn btn-primary btn-sm" })
+    </p>
 </div>
-<p>
-    @Html.ActionLink("ESửa", "Edit", new { id = Model.ProductID }, new { @class = "btn btn-primary btn-sm" }) |
-    @Html.ActionLink("Quay lại danh sách", "Index" , null, new { @class = "btn btn-primary btn-sm" })
-</p>

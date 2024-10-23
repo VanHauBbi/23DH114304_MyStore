@@ -1,21 +1,11 @@
 ﻿@model _23DH114304_MyStore.Models.Product
 
-@{
-    ViewBag.Title = "Delete";
-    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
-}
 
-<h2 class="bg-success">Xóa sản phẩm</h2>
-<hr />
-<h5 class="bg-info">Bạn muốn xóa sản phẩm này? </h5>
-@Html.Partial("PVDetailDele", Model)
-@*<div>
-
+<div>
+    <hr />
     <dl class="dl-horizontal">
         <dt>
-
         </dt>
-
         <dd>
             <img src="@Html.DisplayFor(model => model.ProductImage)" />
         </dd>
@@ -53,17 +43,4 @@
         </dd>
 
     </dl>
-
-</div>*@
-<div>
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
-        <div style="margin-top:10px">
-            <div class="form-actions no-color">
-                <input type="submit" value="Xóa" class="btn btn-primary btn-sm" /> |
-                @Html.ActionLink("Quay lại danh sách", "Index", null, new { @class = "btn btn-primary btn-sm" })
-            </div>
-        </div>
-    }
 </div>
