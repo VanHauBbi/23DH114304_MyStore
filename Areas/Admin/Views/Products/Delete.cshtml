@@ -8,62 +8,20 @@
 <h2 class="bg-success">Xóa sản phẩm</h2>
 <hr />
 <h5 class="bg-info">Bạn muốn xóa sản phẩm này? </h5>
+
 @Html.Partial("PVDetailDele", Model)
-@*<div>
 
-    <dl class="dl-horizontal">
-        <dt>
-
-        </dt>
-
-        <dd>
-            <img src="@Html.DisplayFor(model => model.ProductImage)" />
-        </dd>
-
-        <dt>
-            Tên sản phẩm
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ProductName)
-        </dd>
-
-        <dt>
-            Đơn giá
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ProductPrice)
-        </dd>
-
-        <dt>
-            Mô tả
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ProductDescription)
-        </dd>
-
-        <dt>
-            Danh mục
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Category.CategoryName)
-        </dd>
-
-    </dl>
-
-</div>*@
-<div>
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
-        <div style="margin-top:10px">
-            <div class="form-actions no-color">
-                <input type="submit" value="Xóa" class="btn btn-primary btn-sm" /> |
-                @Html.ActionLink("Quay lại danh sách", "Index", null, new { @class = "btn btn-primary btn-sm" })
+<div class="font-group">
+    <div class="col-md-offset-3 col-md-9">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div style="margin-top:10px">
+                <div class="form-actions no-color">
+                    <input type="submit" value="Xóa" class="btn btn-primary btn-sm" /> |
+                    @Html.ActionLink("Quay lại danh sách", "Index", null, new { @class = "btn btn-primary btn-sm" })
+                </div>
             </div>
-        </div>
-    }
+        }
+    </div>
 </div>

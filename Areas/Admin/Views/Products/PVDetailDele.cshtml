@@ -1,46 +1,51 @@
 ﻿@model _23DH114304_MyStore.Models.Product
 
+<head>
+    <style>
+        img {
+            height: 200px;
+            width: 180px;
+        }
+    </style>
+</head>
 
-<div>
+<div class="container-fluid">
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-        </dt>
-        <dd>
-            <img src="@Html.DisplayFor(model => model.ProductImage)" />
-        </dd>
+    <div class="div-horizontal">
+      <div class="col-md-3">
+          
+          <img src="@Html.DisplayFor(model => model.ProductImage)" />
 
-        <dt>
-            Tên sản phẩm
-        </dt>
+      </div>
+      <div class="col-md-9">
+          <dl>
+              <dt> Tên sản phẩm </dt>
+              <dd> @Html.DisplayFor(model => model.ProductName) </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.ProductName)
-        </dd>
+              <dt>
+                  Đơn giá
+              </dt>
 
-        <dt>
-            Đơn giá
-        </dt>
+              <dd>
+                  @Html.DisplayFor(model => model.ProductPrice)
+              </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.ProductPrice)
-        </dd>
+              <dt>
+                  Mô tả
+              </dt>
 
-        <dt>
-            Mô tả
-        </dt>
+              <dd>
+                  @Html.DisplayFor(model => model.ProductDescription)
+              </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.ProductDescription)
-        </dd>
+              <dt>
+                  Danh mục
+              </dt>
 
-        <dt>
-            Danh mục
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Category.CategoryName)
-        </dd>
-
-    </dl>
+              <dd>
+                  @Html.DisplayFor(model => model.Category.CategoryName)
+              </dd>
+          </dl>
+      </div>
+    </div>
 </div>

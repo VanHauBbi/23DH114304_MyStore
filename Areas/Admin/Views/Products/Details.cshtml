@@ -7,53 +7,14 @@
 
 <h2 class="bg-success">Chi tiết sản phẩm</h2>
 
-@*<div>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-        </dt>
-        <dd>
-           <img src="@Html.DisplayFor(model => model.ProductImage)" />
-        </dd>
-
-        <dt>
-            Tên sản phẩm
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ProductName)
-        </dd>
-
-        <dt>
-            Đơn giá
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ProductPrice)
-        </dd>
-
-        <dt>
-            Mô tả
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ProductDescription)
-        </dd>
-
-        <dt>
-            Danh mục
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Category.CategoryName)
-        </dd>
-
-    </dl>
-</div>*@
 @Html.Partial("PVDetailDele", Model)    
-<div style="margin-top:10px">
-    <p>
-        @Html.ActionLink("Sửa", "Edit", new { id = Model.ProductID }, new { @class = "btn btn-primary btn-sm" }) |
-        @Html.ActionLink("Quay lại danh sách", "Index", null, new { @class = "btn btn-primary btn-sm" })
-    </p>
+<div class="font-group">
+    <div class="col-md-offset-3 col-md-9">
+        <div style="margin-top:10px">
+            <p>
+                @Html.ActionLink("Sửa", "Edit", new { id = Model.ProductID }, new { @class = "btn btn-primary btn-sm" }) |
+                @Html.ActionLink("Quay lại danh sách", "Index", null, new { @class = "btn btn-primary btn-sm" })
+            </p>
+        </div>
+    </div>
 </div>

@@ -173,6 +173,7 @@
     <Compile Include="Models\User.cs">
       <DependentUpon>MyStore_Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModel\ProductSearchVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -263,6 +264,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Views\ProductSearchVM\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
